@@ -8,8 +8,7 @@ const SideBar = ({ onSelect }) => {
     const [people, setPeople] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
-    const [selectedPerson, setSelectedPerson] = useState(null); 
-
+    
     useEffect(() => {
         setLoading(true);
         const getData = async () => {
