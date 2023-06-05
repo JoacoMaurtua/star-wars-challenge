@@ -4,6 +4,10 @@ import PersonCell from './PersonCell';
 import LoadingCell from './LoadingCell';
 import NoticeCell from './NoticeCell';
 
+/* NOTA: Aqui quiero aclarar que dentro de los personajes, hay algunos campos vacios en la API proporcionada, 
+   por ejemplo, hay objetos cuyo campos species o vehicles no tienen ningun valor, y es por ello que en esos
+   casos agregue el string ´Unspecified´*/
+
 const SideBar = ({ onSelect }) => {
   const [people, setPeople] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -72,3 +76,6 @@ const SideBar = ({ onSelect }) => {
 };
 
 export default SideBar;
+
+
+
