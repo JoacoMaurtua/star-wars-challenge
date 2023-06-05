@@ -23,6 +23,8 @@ Sigue estos pasos para instalar y ejecutar el proyecto localmente:
 3. Instala las dependencias: `npm install`
 4. Ejecuta la aplicación: `npm run dev`
 
+Este proyecto utiliza Vite como su herramienta de construcción y desarrollo. Vite es un marco de desarrollo rápido que ofrece un tiempo de compilación ultrarrápido y una experiencia de desarrollo en tiempo real.
+
 ## Dependencias
 
 - axios: ^1.4.0
