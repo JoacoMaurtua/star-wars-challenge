@@ -41,6 +41,7 @@ const SideBar = ({ onSelect }) => {
                 setPeople(peopleWithDetails);
                 setLoading(false);
             } catch (err) {
+                console.log(err)
                 setError(true);
                 setLoading(false);
             }
@@ -57,12 +58,13 @@ const SideBar = ({ onSelect }) => {
     }
 
     return (
-        <div>
+        <div style={{borderRight: '1.5px solid #c2c0c0', marginTop:'0'}}>
             {people.map((person) => (
-                <PersonCell key={person.name} person={person} onSelect={onSelect} />
+                <PersonCell key={person.name} person={person}  onSelect={() => onSelect(person)} />
             ))}
         </div>
     );
 };
 
 export default SideBar;
+

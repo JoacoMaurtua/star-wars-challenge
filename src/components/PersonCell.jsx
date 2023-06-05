@@ -1,28 +1,29 @@
 import React from 'react';
-import { BsArrowRightShort } from 'react-icons/bs';
+import { IoIosArrowForward } from 'react-icons/io';
 
 const PersonCell = ({ person, onSelect }) => {
-    const { name, species, homeworld } = person; //Esto va a provenir de otra llamada a otros endpoints
+    const { name, species, homeworld } = person;
     return (
         <div
             style={{
-                border: '1px solid gray',
-                borderRadius: '5px',
+                borderRadius: '4px',
                 margin: '10px 0',
-                padding: '10px',
+                padding: '10px 16px',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
                 cursor: 'pointer',
+                borderBottom: '1.5px solid #c2c0c0'
             }}
+            onClick={() => onSelect(person)}
         >
-            <div>
-                <h2 style={{ margin: 0 }}>{name}</h2>
-                <p style={{ margin: 0 }}>
+            <div style={{ marginRight: '10px' }}>
+                <h2 style={{ margin: 0, fontSize: '19px', fontWeight:'bolder', marginBottom: '4px' }}>{name}</h2>
+                <p style={{ margin: 0, color: '#828282', fontSize: '16px', marginTop: '2px' }}>
                     {species} from {homeworld}
                 </p>
             </div>
-            <BsArrowRightShort size={30} onClick={() => onSelect(person)}/>
+            <IoIosArrowForward size={20} />
         </div>
     );
 };

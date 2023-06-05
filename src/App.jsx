@@ -10,6 +10,7 @@ function App() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     const [selectedPerson, setSelectedPerson] = useState(null);
     const [showDetail, setShowDetail] = useState(false);
+   
 
     const handleSelectPerson = (person) => {
         setSelectedPerson(person);

@@ -6,7 +6,7 @@ const PersonDetail = ({ person }) => {
     const { eye_color, hair_color, skin_color, birth_year, vehicles } = person;
 
     return (
-        <div>
+        <div style={{ paddingLeft: '22px', paddingRight: '22px' }}>
             <SectionHeader title="General Information" />
 
             <DataCell label="Eye Color" value={eye_color} />
@@ -16,10 +16,9 @@ const PersonDetail = ({ person }) => {
 
             <SectionHeader title="Vehicles" />
 
-            {vehicles.map((vehicle) => (
-                <DataCell key={vehicle} label="Vehicle" value={vehicle} />
+            {vehicles.map((vehicle, index) => (
+                <DataCell key={index} label="Vehicle" value={vehicle} />
             ))}
-
         </div>
     );
 };
